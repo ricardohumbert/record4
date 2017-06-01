@@ -14,6 +14,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecording: UIButton!
     
+
+    
+    
     var audioPlayer: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
     
@@ -71,8 +74,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         stopRecording.isEnabled = false
         if audioRecorder?.isRecording == true {
             audioRecorder?.stop()
-            let audioSession = AVAudioSession.sharedInstance()
-            try! audioSession.setActive(false)
+            do {
+                try audioPlayer = AVAudioPlayer(contentsOf:
+                    (audioRecorder?.url)!)
+                audioPlayer!.delegate = self
+                audioPlayer!.prepareToPlay()
+                audioPlayer!.play()
+            } catch let error as NSError {
+                print("audioPlayer error: \(error.localizedDescription)")
+            }
         }
     }
 
@@ -87,28 +97,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if (flag) {
-            self.performSegue(withIdentifier: "stopRecording", sender: audioRecorder?.url)
-        }
-        else {
-            print("Saving of recording failed")
-        }
     }
     
     func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
         print("Audio Record Encode Error")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "stopRecordingSugue" {
-            let playSoundsVC = segue.destination as! PlaySoundViewController
-            let recordedAudioURL = sender as! URL
-            
-            playSoundsVC.recordedAudioURL = recordedAudioURL as NSURL
-            
-        }
-    }
-    
 }
-
+//

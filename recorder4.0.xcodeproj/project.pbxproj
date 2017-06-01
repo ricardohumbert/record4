@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB7179931EDEC9CD001F91EC /* PlaySoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7179921EDEC9CD001F91EC /* PlaySoundViewController.swift */; };
 		BBF73B7D1EDEB8A500A1C11B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF73B7C1EDEB8A500A1C11B /* AppDelegate.swift */; };
 		BBF73B7F1EDEB8A500A1C11B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF73B7E1EDEB8A500A1C11B /* ViewController.swift */; };
 		BBF73B821EDEB8A500A1C11B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF73B801EDEB8A500A1C11B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB7179921EDEC9CD001F91EC /* PlaySoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundViewController.swift; path = ../PlaySoundViewController.swift; sourceTree = "<group>"; };
 		BBF73B791EDEB8A500A1C11B /* recorder4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recorder4.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF73B7C1EDEB8A500A1C11B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF73B7E1EDEB8A500A1C11B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				BBF73B7C1EDEB8A500A1C11B /* AppDelegate.swift */,
 				BBF73B7E1EDEB8A500A1C11B /* ViewController.swift */,
+				BB7179921EDEC9CD001F91EC /* PlaySoundViewController.swift */,
 				BBF73B801EDEB8A500A1C11B /* Main.storyboard */,
 				BBF73B831EDEB8A500A1C11B /* Assets.xcassets */,
 				BBF73B851EDEB8A500A1C11B /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				BBF73B7F1EDEB8A500A1C11B /* ViewController.swift in Sources */,
 				BBF73B7D1EDEB8A500A1C11B /* AppDelegate.swift in Sources */,
+				BB7179931EDEC9CD001F91EC /* PlaySoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				BBF73B8D1EDEB8A500A1C11B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-60" y="29"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sound View Controller-->
         <scene sceneID="fio-uj-LdH">
             <objects>
-                <viewController id="veu-jh-qay" sceneMemberID="viewController">
+                <viewController id="veu-jh-qay" customClass="PlaySoundViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dk3-z6-Vq9"/>
                         <viewControllerLayoutGuide type="bottom" id="pij-HV-tmG"/>
@@ -61,16 +61,60 @@
                     <view key="view" contentMode="scaleToFill" id="XTm-BN-drw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFc-YA-16X">
+                                <rect key="frame" x="64" y="60" width="57" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="squirrel"/>
+                                <connections>
+                                    <action selector="playChipmunk:" destination="veu-jh-qay" eventType="touchUpInside" id="eGx-Nk-ruH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlI-LO-lOI">
+                                <rect key="frame" x="71" y="206" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="darth-vader"/>
+                                <connections>
+                                    <action selector="playDarthVader:" destination="veu-jh-qay" eventType="touchUpInside" id="91k-nh-wn6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrm-F7-Xor">
+                                <rect key="frame" x="232" y="212" width="48" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="snail"/>
+                                <connections>
+                                    <action selector="playSnail:" destination="veu-jh-qay" eventType="touchUpInside" id="5Z6-mY-7al"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5A-kd-8hu">
+                                <rect key="frame" x="219" y="69" width="68" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="easter-bunny"/>
+                                <connections>
+                                    <action selector="playRabbit:" destination="veu-jh-qay" eventType="touchUpInside" id="zwv-2q-rvb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="chipmunk" destination="NFc-YA-16X" id="KSK-ZS-dGP"/>
+                        <outlet property="darthVader" destination="OlI-LO-lOI" id="etq-Nq-PoR"/>
+                        <outlet property="rabbit" destination="f5A-kd-8hu" id="ChE-ku-wOQ"/>
+                        <outlet property="snail" destination="jrm-F7-Xor" id="FC1-XS-1DK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0y8-Ml-3CV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="30"/>
+            <point key="canvasLocation" x="685.60000000000002" y="29.23538230884558"/>
         </scene>
     </scenes>
     <resources>
+        <image name="darth-vader" width="32" height="32"/>
+        <image name="easter-bunny" width="32" height="32"/>
         <image name="microphone-2" width="32" height="32"/>
+        <image name="snail" width="32" height="32"/>
+        <image name="squirrel" width="32" height="32"/>
         <image name="stop" width="32" height="32"/>
     </resources>
 </document>
